@@ -1,0 +1,10 @@
+services:
+        Wikipedia:
+            classname: services.wikipediaservice.WikipediaService
+        Weather:
+            classname: services.openweathermap.WeatherService
+            url: http://api.openweathermap.org/data/2.5/weather
+            api_key: 0bfe2759bd3ccd504ed0bcacc31a06d8
+        GPT2:
+            classname: services.gpt2.GPT2Service
+            url: 'https://api-inference.huggingface.co/models/gpt2'
