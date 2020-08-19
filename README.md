@@ -1,5 +1,5 @@
 # Service Oriented Programming in Python
-![Alt text](xmlrpc_diagram.png)
+![Alt text](xmlrpc_diagram1.png)
 
 In this repository we explore the service-oriented programming using python. I tried to
 implement it in a way that the services can be added/removed on the fly using the services_config.yml
