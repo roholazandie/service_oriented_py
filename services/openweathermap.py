@@ -22,7 +22,7 @@ class WeatherService(Service):
 
 
 if __name__ == "__main__":
-    config = {"api_key": "0bfe2759bd3ccd504ed0bcacc31a06d8"}
+    config = {"api_key": ""}
     ws = WeatherService(config)
     r = ws.get_temperature(place="London,GB")
     print(r)
