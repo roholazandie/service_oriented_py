@@ -9,5 +9,9 @@ services:
             classname: services.gpt2.GPT2Service
             url: 'https://api-inference.huggingface.co/models/gpt2'
 
+        SentimentAnalysis:
+            classname: services.sentimentanalysis.SentimentAnalysisService
+            url: /home/rohola/codes/service_oriented_py/model/pretrain_distilbert_full_sentiment
+
 host: 127.0.0.1
 port: 3000

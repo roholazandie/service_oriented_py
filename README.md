@@ -26,9 +26,12 @@ Run the flask:
 ```
 python flask_server.py
 ```
+You should [download](https://github.com/roholazandie/sentiment_classification) the models if you want to use the sentiment analysis service, because it's a local service:
 
 Send the curl commands:
-
+```
+curl --header "Content-Type: application/json" --request POST --data '{"text":"I hate this life."}' http://localhost:5000/api/ask_sentiment
+```
 ```
 curl --header "Content-Type: application/json" --request POST --data '{"text":"This is a good game"}' http://localhost:5000/api/ask_gpt
 ```

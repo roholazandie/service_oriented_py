@@ -138,3 +138,4 @@ bots/multibot/
 .vscode
 /libs/
 env
+/model/

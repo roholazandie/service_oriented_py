@@ -2,3 +2,5 @@ wikipedia
 pyyaml
 pyowm
 flask
+transformers
+torch

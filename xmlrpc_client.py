@@ -9,6 +9,10 @@ class XMLRPCClient:
         self.config = config
         self.client = ServerProxy(f'http://{config.host}:{config.port}')
 
+    def ask_sentiment(self, text):
+        r = self.client.sentimentanalysis.get_sentiment(text)
+        return r
+
     def ask_wikipedia(self, text):
         r = self.client.wikipedia.ask_wikipedia(text)
         return r

@@ -8,6 +8,14 @@ app = Flask(__name__)
 config = XMLRPCConfig.from_yaml("services_config.yml")
 xmlrpcclinet = XMLRPCClient(config)
 
+@app.route('/api/ask_sentiment', methods=['POST'])
+def ask_sentiment():
+    r = request.get_json()
+    service_response = xmlrpcclinet.ask_sentiment(r['text'])
+    response = make_response(jsonify({"response": service_response}))
+    return response
+
+
 @app.route('/api/ask_gpt', methods=['POST'])
 def ask_gpt():
     r = request.get_json()
@@ -37,6 +45,8 @@ if __name__ == '__main__':
 
 
 
+#curl --header "Content-Type: application/json" --request POST --data '{"text":"I hate this life."}' http://localhost:5000/api/ask_sentiment
 #curl --header "Content-Type: application/json" --request POST --data '{"text":"This is a good game"}' http://localhost:5000/api/ask_gpt
 #curl --header "Content-Type: application/json" --request POST --data '{"text":"Einstein"}' http://localhost:5000/api/ask_wikipedia
 #curl --header "Content-Type: application/json" --request POST --data '{"text":"London,GB"}' http://localhost:5000/api/ask_weather
+
