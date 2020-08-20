@@ -1,5 +1,4 @@
 from abc import ABCMeta, abstractmethod
-
 class Service(object):
 
     def __init__(self, config):
