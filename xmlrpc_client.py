@@ -29,4 +29,5 @@ class XMLRPCClient:
 if __name__ == "__main__":
     config = XMLRPCConfig.from_yaml("services_config.yml")
     xmlrpcclinet = XMLRPCClient(config)
-    print(xmlrpcclinet.ask_gpt("I am going to"))
+    # print(xmlrpcclinet.ask_gpt("I am going to"))
+    print(xmlrpcclinet.ask_weather("Denver, USA"))

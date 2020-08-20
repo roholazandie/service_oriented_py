@@ -25,6 +25,7 @@ eggs/
 .eggs/
 lib/
 libs/
+models/
 lib64/
 parts/
 sdist/
