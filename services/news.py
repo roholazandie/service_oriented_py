@@ -1,6 +1,10 @@
 import requests
 import json
-from services.service import Service
+
+try:
+    from services.service import Service
+except Exception:
+    from service import Service
 
 class NewsService(Service):
     def __init__(self, config=None):

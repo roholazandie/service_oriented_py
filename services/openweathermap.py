@@ -1,5 +1,9 @@
-from services.service import Service
 from pyowm import OWM
+
+try:
+    from services.service import Service
+except Exception:
+    from service import Service
 
 class WeatherService(Service):
 
