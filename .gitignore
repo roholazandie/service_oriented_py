@@ -8,6 +8,8 @@ __pycache__/
 # C extensions
 *.so
 
+
+
 ##Avoiding to commit session data
 bots/ryan/session_data/*
 bots/tutorial/session_data/*
@@ -39,7 +41,10 @@ bots/ryan/password.txt
 bots/tutorial/session_data/*
 pretrain_distillbert_full_sst/
 pretrain_roberta_model/
+
+# Config files
 api_key_config.yaml
+services_config.yaml
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
