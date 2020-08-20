@@ -44,7 +44,7 @@ pretrain_roberta_model/
 
 # Config files
 api_key_config.yaml
-services_config.yaml
+services_config.yml
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
