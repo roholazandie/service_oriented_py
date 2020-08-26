@@ -12,6 +12,9 @@ services:
         SentimentAnalysis:
             classname: services.sentimentanalysis.SentimentAnalysisService
             url: ./models/pretrain_distilbert_full_sentiment
+        SentimentAnalysis:
+            classname: services.semanticsimilarity.SemanticSimilarityService
+            url: ./models/pretrain_distilroberta
 
         News:
             classname: services.news.BingNewsService

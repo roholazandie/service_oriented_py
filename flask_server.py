@@ -15,6 +15,20 @@ def ask_sentiment():
     response = make_response(jsonify({"response": service_response}))
     return response
 
+@app.route('/api/as_semnatic_similarity_with_concept', methods=['POST'])
+def ask_sentiment_with_concept():
+    r = request.get_json()
+    service_response = xmlrpcclinet.ask_sentiment_with_concept(r['text'], r['concept'])
+    response = make_response(jsonify({"response": service_response}))
+    return response
+
+@app.route('/api/as_semnatic_similarity_with_concepts', methods=['POST'])
+def ask_sentiment_with_concepts():
+    r = request.get_json()
+    service_response = xmlrpcclinet.ask_sentiment_with_concepts(r['text'], r['concepts'])
+    response = make_response(jsonify({"response": service_response}))
+    return response
+
 
 @app.route('/api/ask_gpt', methods=['POST'])
 def ask_gpt():
