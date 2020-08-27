@@ -6,7 +6,7 @@ try:
 except Exception:
     from service import Service
 
-class NewsService(Service):
+class BingNewsService(Service):
     def __init__(self, config=None):
         Service.__init__(self, config)
         self._url = config["url"]

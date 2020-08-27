@@ -13,6 +13,14 @@ class XMLRPCClient:
         r = self.client.sentimentanalysis.get_sentiment(text)
         return r
 
+    def ask_semantic_similarity_with_concept(self, text, concept):
+        r = self.client.semanticsimilarity.get_similarity_with_concept(text, concept)
+        return r
+
+    def ask_semantic_similarity_with_concepts(self, text, concepts):
+        r = self.client.semanticsimilarity.get_similarity_with_concepts(text, concepts)
+        return r
+
     def ask_wikipedia(self, text):
         r = self.client.wikipedia.ask_wikipedia(text)
         return r
@@ -27,7 +35,9 @@ class XMLRPCClient:
 
 
 if __name__ == "__main__":
-    config = XMLRPCConfig.from_yaml("services_config.yml")
+    config = XMLRPCConfig.from_yaml('services_config.yml')
     xmlrpcclinet = XMLRPCClient(config)
     # print(xmlrpcclinet.ask_gpt("I am going to"))
-    print(xmlrpcclinet.ask_weather("Denver, USA"))
+    # print(xmlrpcclinet.ask_weather("Denver, USA"))
+
+    print(xmlrpcclinet.ask_similarity_with_concept("I love to sit down with a good book.", "reading"))

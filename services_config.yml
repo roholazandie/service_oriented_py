@@ -1,27 +1,29 @@
 services:
+
+        # Online Content Services
         Wikipedia:
             classname: services.wikipediaservice.WikipediaService
-        Weather:
-            classname: services.openweathermap.WeatherService
-            url: http://api.openweathermap.org/data/2.5/weather
-            api_key: <YOUR_API_KEY>
+        # Weather:
+        #     classname: services.openweathermap.WeatherService
+        #     url: 'http://api.openweathermap.org/data/2.5/weather'
+        #     api_key: <YOUR_API_KEY>
+        News:
+            classname: services.news.BingNewsService
+            url: 'https://microsoft-azure-bing-news-search-v1.p.rapidapi.com/'
+            headers:
+                x-rapidapi-host: 'microsoft-azure-bing-news-search-v1.p.rapidapi.com'
+                x-rapidapi-key: '2d82bb5d95msh2a4e5c2a45a8eb3p18b00ejsn98308d90b548'
+
+        # NLP Services
         GPT2:
             classname: services.gpt2.GPT2Service
             url: 'https://api-inference.huggingface.co/models/gpt2'
-
         SentimentAnalysis:
             classname: services.sentimentanalysis.SentimentAnalysisService
-            url: ./models/pretrain_distilbert_full_sentiment
-        SentimentAnalysis:
+            url: './models/pretrain_distilbert_full_sentiment'
+        SemanticSimilarity:
             classname: services.semanticsimilarity.SemanticSimilarityService
-            url: ./models/pretrain_distilroberta
-
-        News:
-            classname: services.news.BingNewsService
-            url: "https://microsoft-azure-bing-news-search-v1.p.rapidapi.com/"
-            headers:
-                x-rapidapi-host: "microsoft-azure-bing-news-search-v1.p.rapidapi.com"
-                x-rapidapi-key: "2d82bb5d95msh2a4e5c2a45a8eb3p18b00ejsn98308d90b548"
+            url: './models/pretrain_distilroberta'
                         
             
 

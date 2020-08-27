@@ -30,7 +30,10 @@ You should [download](https://github.com/roholazandie/sentiment_classification) 
 
 Send the curl commands:
 ```
-curl --header "Content-Type: application/json" --request POST --data '{"text":"I hate this life."}' http://localhost:5000/api/ask_sentiment
+curl --header "Content-Type: application/json" --request POST --data '{"text":"I love this life."}' http://localhost:5000/api/ask_sentiment
+```
+```
+curl --header "Content-Type: application/json" --request POST --data '{"text":"I would love to, yes!", "concepts": ["yes", "no"]}' http://localhost:5000/api/ask_semantic_similarity_with_concepts
 ```
 ```
 curl --header "Content-Type: application/json" --request POST --data '{"text":"This is a good game"}' http://localhost:5000/api/ask_gpt

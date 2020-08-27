@@ -6,9 +6,6 @@ import yaml
 
 from loader import ClassLoader
 
-
-
-
 class XMLRPCServer:
     def __init__(self, config):
         self.config = config

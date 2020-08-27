@@ -5,17 +5,19 @@ from transformers import (RobertaTokenizer, RobertaForSequenceClassification, In
 
 from services.service import Service
 
-class SemanticSimilarity():
+# class SemanticSimilarity():
 
-    def __init__(self, model, tokenizer):
-        self.model = model
-        self.tokenizer = tokenizer
+#     def __init__(self, model, tokenizer):
+#         self.model = model
+#         self.tokenizer = tokenizer
 
 
 class SemanticSimilarityService(Service):
 
-    def __init__(self, model_dir):
-        self.model_dir = model
+    def __init__(self, model_config):
+        self.model_dir = model_config['url']
+        print("self.model_dir type: {}".format(type(self.model_dir)))
+        print("self.model_dir: {}".format(self.model_dir))
         self.tokenizer = RobertaTokenizer.from_pretrained(self.model_dir)
         self.model = RobertaForSequenceClassification.from_pretrained(self.model_dir)
 
